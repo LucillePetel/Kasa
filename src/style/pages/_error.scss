@@ -1,0 +1,23 @@
+.not-found {
+    color: $color-1;
+    text-align: center;
+    margin: 159px auto 159px auto;
+    .error-message {
+        margin-bottom: 182px;
+        h1 {
+            font-size: 288px;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 36px;
+        }
+    }
+    a {
+        color: $color-1;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }  
+    }
+
+}
