@@ -5,7 +5,11 @@ const Card = (props) => {
   return (
     <div className="apartment-card">
       <Link to="/">
-        <img src={props.cover} alt="picture-card" className="picture-card" />
+        <img
+          src={props.cover}
+          alt="visuel appartement"
+          className="picture-card"
+        />
         <h3 className="title-card">{props.title}</h3>
       </Link>
     </div>
