@@ -7,22 +7,24 @@ import AboutBox from "../components/about/AboutBox";
 const About = () => {
   const [abouts, setAbouts] = useState([]);
 
-  useEffect(fectchAbouts, []);
-
-  function fectchAbouts() {
+  const fectchAbouts = () => {
     fetch("aboutData.json")
       .then((res) => res.json())
       .then((res) => setAbouts(res))
       .catch(console.error);
-  }
+  };
+
+  useEffect(fectchAbouts, []);
 
   return (
     <div>
       <Header />
       <BannerAbout />
+
       {abouts.map((about) => (
         <AboutBox title={about.title} content={about.content} />
       ))}
+
       <Footer />
     </div>
   );
