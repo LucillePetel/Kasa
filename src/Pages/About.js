@@ -17,7 +17,7 @@ const About = () => {
   useEffect(fectchAbouts, []);
 
   return (
-    <div>
+    <div className="about-page">
       <Header />
       <BannerAbout />
 

@@ -5,7 +5,7 @@ import NotFound from "../components/error/NotFound";
 
 const Error = () => {
   return (
-    <div>
+    <div className="error-page">
       <Header />
       <NotFound />
       <Footer />

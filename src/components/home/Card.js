@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
-    <div className="apartment-card">
-      <Link to="/">
+    <article className="apartment-card">
+      <Link to={`/annonce/${props.id}`}>
         <img
           src={props.cover}
           alt="visuel appartement"
@@ -12,7 +12,7 @@ const Card = (props) => {
         />
         <h3 className="title-card">{props.title}</h3>
       </Link>
-    </div>
+    </article>
   );
 };
 

@@ -6,16 +6,14 @@ import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="app">
-      <Router>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/annonce" exact element={<Annonce />} />
-          <Route path="/About" exact element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/annonce/:id" exact element={<Annonce />} />
+        <Route path="/About" exact element={<About />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
 
