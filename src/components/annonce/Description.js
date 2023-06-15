@@ -1,7 +1,7 @@
 import React from "react";
 
-const Description = () => {
-  return <div></div>;
+const Description = (props) => {
+  return <div> </div>;
 };
 
 export default Description;

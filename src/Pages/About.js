@@ -21,8 +21,8 @@ const About = () => {
       <Header />
       <BannerAbout />
 
-      {abouts.map((about) => (
-        <AboutBox title={about.title} content={about.content} />
+      {abouts.map((about, index) => (
+        <AboutBox key={index} title={about.title} content={about.content} />
       ))}
 
       <Footer />
