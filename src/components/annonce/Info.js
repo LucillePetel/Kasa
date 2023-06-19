@@ -6,8 +6,8 @@ const Info = (props) => {
       <div className="annonce-title-content">
         <h1 className="annonce-title">{props.title}</h1>
         <p className="annonce-location">{props.location}</p>
+        <div className="annonce-tag">{props.tags}</div>
       </div>
-      <div className="annonce-tag">{props.tags}</div>
       <div className="annonce-host">
         <img src={props.host.picture} alt="host" className="host-picture" />
         <p>{props.host.name}</p>

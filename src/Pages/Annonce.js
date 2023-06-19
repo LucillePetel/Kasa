@@ -23,16 +23,18 @@ const Annonce = (i) => {
         location={dataAnnonce.location}
         rating={dataAnnonce.rating}
       />
-      <Collapse
-        key={i}
-        title="Description"
-        description={dataAnnonce.description}
-      />
-      <Collapse
-        key={i}
-        title="Equipments"
-        description={dataAnnonce.equipments}
-      />
+      <div className="contain-collapse">
+        <Collapse
+          key={i}
+          title="Description"
+          description={dataAnnonce.description}
+        />
+        <Collapse
+          key={i}
+          title="Equipements"
+          description={dataAnnonce.equipments}
+        />
+      </div>
       <Footer />
     </div>
   );

@@ -2,13 +2,40 @@
     color: $color-1;
 }
 
-.content-info {
-    display: flex;
-
+.carrousel-contain {
+    margin-top: 60px;
 }
+
+.carrousel {
+    border-radius: $border;
+    height: 415px;
+    width: 1240px;
+    overflow: hidden;
+}
+
+.content-info {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*.annonce-tag {
+    background-color: $color-1;
+    color: $color-2;
+}*/
 
 .host-picture {
     width: 64px;
     height: 64px;
     border-radius: 40px;
+}
+
+
+.contain-collapse {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown {
+    margin: 38px;
 }
