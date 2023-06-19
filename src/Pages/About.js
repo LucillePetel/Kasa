@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import BannerAbout from "../components/about/BannerAbout";
-import AboutBox from "../components/about/AboutBox";
+import Collapse from "../components/Collapse";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -20,11 +20,13 @@ const About = () => {
     <div className="about-page">
       <Header />
       <BannerAbout />
-
       {abouts.map((about, index) => (
-        <AboutBox key={index} title={about.title} content={about.content} />
+        <Collapse
+          key={index}
+          title={about.title}
+          description={about.description}
+        />
       ))}
-
       <Footer />
     </div>
   );

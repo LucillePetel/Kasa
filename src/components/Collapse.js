@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Chevron from "../../img/vector-bas.png";
+import Chevron from "../img/vector-bas.png";
 
-const AboutBox = (props) => {
+const Collapse = (props) => {
   const [isContentVisible, setIsContentVisible] = useState(false);
 
   const openContent = () => {
@@ -21,11 +21,11 @@ const AboutBox = (props) => {
 
       {isContentVisible && (
         <div className="dropdown-text-box">
-          <p className="dropdown-text">{props.content}</p>
+          <p className="dropdown-text">{props.description}</p>
         </div>
       )}
     </div>
   );
 };
 
-export default AboutBox;
+export default Collapse;
