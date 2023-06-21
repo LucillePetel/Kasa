@@ -1,0 +1,46 @@
+// provisoire
+
+.carrousel-contain {
+
+    height: 415px;
+    width: 80%;
+    position: relative;
+    margin: 70px auto 0 auto;
+
+    .slider-picture{
+
+        height: 415px;
+        width: 100%;
+        border-radius: 25px;
+        object-fit:cover;
+    }
+    .slider-next {
+        position: absolute;
+        top: 40%;
+        display: flex;
+        align-items: center;
+        right: 0;
+        &-icon {
+            width: 46.68px;
+            margin-right: 23px;
+        }
+    }
+    .slider-previous {
+        position: absolute;
+        top: 40%;
+        display: flex;
+        align-items: center;
+        left: 0;
+        &-icon {
+            width: 46.68px;
+            margin-left: 23px;
+            
+        }
+    }
+}
+
+
+
+
+
+

@@ -19,7 +19,9 @@ const Annonce = (i) => {
         key={i}
         title={dataAnnonce.title}
         host={dataAnnonce.host}
-        tags={dataAnnonce.tags}
+        tags={dataAnnonce.tags.map((tag) => (
+          <li className="tag">{tag}</li>
+        ))}
         location={dataAnnonce.location}
         rating={dataAnnonce.rating}
       />
@@ -32,7 +34,13 @@ const Annonce = (i) => {
         <Collapse
           key={i}
           title="Equipements"
-          description={dataAnnonce.equipments}
+          description={
+            <ul>
+              {dataAnnonce.equipments.map((equipment) => (
+                <li>{equipment}</li>
+              ))}
+            </ul>
+          }
         />
       </div>
       <Footer />

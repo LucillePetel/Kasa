@@ -20,9 +20,7 @@ const Collapse = (props) => {
       </div>
 
       {isContentVisible && (
-        <div className="dropdown-text-box">
-          <p className="dropdown-text">{props.description}</p>
-        </div>
+        <div className="dropdown-text">{props.description}</div>
       )}
     </div>
   );
