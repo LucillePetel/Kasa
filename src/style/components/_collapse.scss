@@ -1,6 +1,52 @@
 .dropdown {
-    margin: 38px;
+    width: 90%;
+    margin-top: 31px ; 
+    overflow: hidden;
+   &-title-box, &-text {
+        width: 90%;
+    }
+
     &-text {
         padding: 40px 12px 53px 20px;
+    }
+
+}
+
+
+.dropdown-title-box {
+    position: relative;
+    background-color: $color-1;
+    border-radius: 5px;
+    height: 47px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    padding-right: 18px;
+    .chevron-rotate {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-title {
+        margin: 5px 0 5px 18px; 
+    }
+}
+.dropdown-text-box {
+    position: relative;
+    top: -30px;
+    background-color: $color-3;
+    border-radius: 5px;
+    color: $color-1;
+    animation: slide 0.5s ease-in-out;
+    .dropdown-text {
+        padding: 36px 27px 19px 18px;
+        
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-100%);
     }
 }

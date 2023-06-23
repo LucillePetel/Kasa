@@ -7,12 +7,20 @@
         h1 {
             font-size: 288px;
             margin-bottom: 0.5rem;
-            font-weight: 700;
+           
+            @media screen and (max-width: 768px) {
+                font-size: 100px;
+            }
             
         }
         p {
             font-size: 36px;
+            @media screen and (max-width: 768px) {
+                font-size: 25px;
+            }
         }
+         
+    
     }
     a {
         color: $color-1;

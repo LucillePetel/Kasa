@@ -1,12 +1,26 @@
-header {
+.header {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     top: 40px;
     margin: 0 auto;
-    max-width: 1240px;
-    width: 80%;
+
+    width: 1240px;
+
+    @media screen and (max-width: 768px) {
+		
+        width: 90%;
+	}
+
+    &-logo {
+        height: 68px;
+        @media screen and (max-width: 768px) {
+            height: 47px;
+        }
+    }
+
+    
     a {
         color: $color-1;
         text-decoration: none;
@@ -17,10 +31,18 @@ header {
     .navbar {
         display: flex;
         font-size: 24px;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
         .navlink {
             margin-left: 57px;
+            @media screen and (max-width: 768px) {
+                margin-left: 25px;
+            }
         }
     }
+
+   
 }
 
 

@@ -6,7 +6,9 @@
 .content-info {
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px auto 0 auto;
 }
 
 .info{
@@ -60,6 +62,10 @@
 
 .contain-collapse {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    
 }
+
 
