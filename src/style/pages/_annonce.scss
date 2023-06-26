@@ -9,16 +9,27 @@
     justify-content: space-between;
     width: 80%;
     margin: 30px auto 0 auto;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 15px;
+    }
 }
 
 .info{
     .annonce-title {
         margin: 0;
         font-size: 36px;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;  
+        }
     }
     .annonce-location {
         margin: 5px 0 20px 0;
         font-size: 18px;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;  
+          }
     }
 }
 
@@ -36,35 +47,71 @@
         text-align: center;
         line-height: 180%;
         font-size: 14px;
+        @media screen and (max-width: 768px) {
+            font-size: 10px;  
+            height: 18px;
+            padding: 0 20px 0 20px;
+          }
     }
+}
+
+.annonce-host {
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    
 }
 
 .host {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    &-picture {
-        margin: 0 0 27px 10px;
+    font-size: 18px;
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
     }
+    &-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 40px;
+        margin: 0 0 27px 10px;
+        @media screen and (max-width: 768px) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+    
+    
+}
+
+.annonce-rating {
+    width: 80%;
 }
 
 .star {
     margin-left: 15.25px;
+    @media screen and (max-width: 768px) {
+        height: 13px;
+    }
 }
-
-
-.host-picture {
-    width: 64px;
-    height: 64px;
-    border-radius: 40px;
-}
-
 
 .contain-collapse {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto 0 auto;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
     
 }
 

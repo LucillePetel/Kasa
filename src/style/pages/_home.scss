@@ -4,12 +4,13 @@
     align-items: center;
     margin: 100px auto 0 auto;
     width: 1240px;
-    @media screen and (max-width: 1024px) {
-        width: 95%;
-    }
     @media screen and (max-width: 768px) {
         margin: 60px auto 10px auto;
     } 
+    @media screen and (max-width: 1224px) {
+        width: 95%;
+    }
+
 
     &-img {
 
@@ -18,6 +19,10 @@
             height: 111px;
             width: 95%;
         }
+        @media screen and (max-width: 1224px) {
+            width: 100%;
+        }
+    
     }
 
     .banner-text {
@@ -31,7 +36,8 @@
             margin-top: 1.7rem;
             width: 217px;     
             left: 36px;    
-        }   
+        }  
+
     }
 }
 
@@ -46,6 +52,7 @@
     @media screen and (max-width: 1224px) {
 		grid-template-columns: repeat(2, 1fr);
         width: 95%;
+
 	}
 
     @media screen and (max-width: 768px) {

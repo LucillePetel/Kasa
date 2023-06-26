@@ -20,13 +20,15 @@ const About = () => {
     <div className="about-page">
       <Header />
       <BannerAbout />
-      {abouts.map((about, index) => (
-        <Collapse
-          key={index}
-          title={about.title}
-          description={about.description}
-        />
-      ))}
+      <div className="about-collapse">
+        {abouts.map((about, index) => (
+          <Collapse
+            key={index}
+            title={about.title}
+            description={about.description}
+          />
+        ))}
+      </div>
       <Footer />
     </div>
   );
