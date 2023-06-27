@@ -8,7 +8,10 @@ import data from "../data/annonces.json";
 import { useParams } from "react-router-dom";
 
 const Annonce = (i) => {
+  //useParams pour récuperer l'id depuis l'url
   const { id } = useParams();
+
+  // Récupération des données de l'annonce correspondant à l'id
   const dataAnnonce = data.find((dataAnnonce) => dataAnnonce.id === id);
 
   return (
@@ -26,16 +29,13 @@ const Annonce = (i) => {
         rating={dataAnnonce.rating}
       />
       <div className="contain-collapse">
+        {/* Collapse contenant la description de l'annonce*/}
+        <Collapse title="Description" description={dataAnnonce.description} />
+        {/* Collapse contenant les équipements de l'annonce*/}
         <Collapse
-          key={i}
-          title="Description"
-          description={dataAnnonce.description}
-        />
-        <Collapse
-          key={i}
           title="Equipements"
           description={
-            <ul>
+            <ul className="equipements">
               {dataAnnonce.equipments.map((equipment) => (
                 <li>{equipment}</li>
               ))}

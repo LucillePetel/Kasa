@@ -4,6 +4,7 @@ import Chevron from "../img/vector-bas.png";
 const Collapse = (props) => {
   const [isContentVisible, setIsContentVisible] = useState(false);
 
+  // Ouvrir ou fermer le contenu du collapse
   const openContent = () => {
     setIsContentVisible(!isContentVisible);
   };
@@ -12,6 +13,7 @@ const Collapse = (props) => {
     <div className="dropdown">
       <div onClick={openContent} className="dropdown-title-box">
         <h2 className="dropdown-title">{props.title}</h2>
+        {/* Affichage de l'icône de chevron et rotation si le contenu est visible */}
         <img
           src={Chevron}
           alt="chevron"
@@ -19,6 +21,7 @@ const Collapse = (props) => {
         />
       </div>
 
+      {/* Affichage du contenu lorsque isContentVisible est vrai */}
       {isContentVisible && (
         <div className="dropdown-text">{props.description}</div>
       )}

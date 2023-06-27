@@ -7,6 +7,7 @@ import Collapse from "../components/Collapse";
 const About = () => {
   const [abouts, setAbouts] = useState([]);
 
+  // Récupère les données depuis aboutData.json
   const fectchAbouts = () => {
     fetch("aboutData.json")
       .then((res) => res.json())
@@ -21,6 +22,7 @@ const About = () => {
       <Header />
       <BannerAbout />
       <div className="about-collapse">
+        {/* Affichage des collapses pour chaque élément */}
         {abouts.map((about, index) => (
           <Collapse
             key={index}

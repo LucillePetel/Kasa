@@ -4,6 +4,7 @@ import Card from "../home/Card";
 const Gallery = () => {
   const [apartments, setApartments] = useState([]);
 
+  // récupère les appartements depuis annonces.json
   const fetchApartments = () => {
     fetch("annonces.json")
       .then((res) => res.json())
@@ -11,10 +12,12 @@ const Gallery = () => {
       .catch(console.error);
   };
 
+  // Appel de la fonction fetchApartments au chargement du composant
   useEffect(fetchApartments, []);
 
   return (
     <div className="gallery">
+      {/* Affichage des cards pour chaque logement */}
       {apartments.map((apartment) => (
         <Card
           key={apartment.id}

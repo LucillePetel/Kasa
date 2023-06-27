@@ -1,14 +1,21 @@
 .dropdown {
-    width: 90%;
+    width: 47%;
     margin-top: 31px ; 
     overflow: hidden;
     border-radius: 10px;
-   &-title-box, &-text {
+   &-title-box {
         width: 90%;
     }
 
     &-text {
-        padding: 40px 12px 53px 20px;
+        padding: 20px 27px 19px 18px;
+        background-color: $color-3;
+        border-radius: 10px;
+        font-size: 18px;
+        line-height: 25px;
+        color: $color-1;
+        position: relative;
+        top: -10px;
     }
     @media screen and (max-width: 768px) {
         width: 100%;
@@ -37,10 +44,12 @@
 }
 
 .chevron, .chevron-rotate {
-
         margin-right: 30px;
-    
 }
+
+
+
+/*
 .dropdown-text-box {
     position: relative;
     top: -30px;
@@ -48,14 +57,12 @@
     border-radius: 5px;
     color: $color-1;
     animation: slide 0.5s ease-in-out;
-    .dropdown-text {
-        padding: 36px 27px 19px 18px;
-        
-    }
+   
 }
+   
 
 @keyframes slide {
     0% {
         transform: translateY(-100%);
     }
-}
+}*/

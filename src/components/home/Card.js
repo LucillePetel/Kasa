@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
   return (
     <article className="apartment-card">
+      {/* Lien vers la page du logement */}
       <Link to={`/annonce/${props.id}`}>
         <img
           src={props.cover}

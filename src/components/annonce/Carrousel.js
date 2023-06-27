@@ -7,10 +7,12 @@ const Carrousel = (props) => {
   const [current, setCurrent] = useState(0);
   const length = props.pictures.length;
 
+  // Fonction pour afficher l'image suivante
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
+  // Fonction pour afficher l'image précédente
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
@@ -26,6 +28,7 @@ const Carrousel = (props) => {
             }
           >
             {i === current && (
+              // Affiche l'image seulement si elle correspond à l'index actuel
               <img src={picture} alt="appartement" className="slider-picture" />
             )}
           </div>
@@ -35,6 +38,7 @@ const Carrousel = (props) => {
       {length > 1 ? (
         <>
           <div className="slider-previous" onClick={prevSlide}>
+            {/* Afficher la diapositive précédente */}
             <img
               src={leftArrow}
               alt="arrow left"
@@ -42,6 +46,7 @@ const Carrousel = (props) => {
             />
           </div>
           <div className="slider-next" onClick={nextSlide}>
+            {/* Afficher la diapositive suivante */}
             <img
               src={rightArrow}
               alt="arrow right"
