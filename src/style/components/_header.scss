@@ -5,12 +5,16 @@
     align-items: center;
     top: 40px;
     margin: 0 auto;
-
     width: 1240px;
 
-    @media screen and (max-width: 1224px) {
-		
+    @media screen and (max-width: 768px) {
         width: 90%;
+	}
+    @media (min-width: 769px) and (max-width: 1224px) {
+        width: 80%;
+	}
+    @media (min-width: 1224px) {
+        width: 65%;
 	}
 
     &-logo {

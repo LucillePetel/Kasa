@@ -8,14 +8,17 @@
     }
 
     &-text {
-        padding: 20px 27px 19px 18px;
+        padding: 40px 27px 19px 18px;
         background-color: $color-3;
         border-radius: 10px;
         font-size: 18px;
         line-height: 25px;
         color: $color-1;
         position: relative;
-        top: -10px;
+        top: -17px;
+    }
+    &-text-none {
+        font-size: 0;
     }
     @media screen and (max-width: 768px) {
         width: 100%;
@@ -34,6 +37,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    border-radius: 10px;
     .chevron-rotate {
         transform: rotate(180deg);
     }
@@ -49,20 +53,3 @@
 
 
 
-/*
-.dropdown-text-box {
-    position: relative;
-    top: -30px;
-    background-color: $color-3;
-    border-radius: 5px;
-    color: $color-1;
-    animation: slide 0.5s ease-in-out;
-   
-}
-   
-
-@keyframes slide {
-    0% {
-        transform: translateY(-100%);
-    }
-}*/

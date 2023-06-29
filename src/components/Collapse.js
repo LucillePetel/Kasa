@@ -20,10 +20,10 @@ const Collapse = (props) => {
           className={isContentVisible ? "chevron-rotate" : "chevron"}
         />
       </div>
-
-      {/* Affichage du contenu lorsque isContentVisible est vrai */}
-      {isContentVisible && (
+      {isContentVisible ? (
         <div className="dropdown-text">{props.description}</div>
+      ) : (
+        <div className="dropdown-text-none">{props.description}</div>
       )}
     </div>
   );
