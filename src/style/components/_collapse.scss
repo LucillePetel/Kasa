@@ -7,21 +7,33 @@
         width: 90%;
     }
 
+    &-title {
+        font-weight: 500;
+    }
+
     &-text {
-        padding: 40px 27px 19px 18px;
-        background-color: $color-3;
+        padding: 40px 27px 12px 18px;
+        background-color: $color-2;
         border-radius: 10px;
         font-size: 18px;
         line-height: 25px;
         color: $color-1;
         position: relative;
         top: -17px;
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            line-height: 17.11px;    
+        }
     }
     &-text-none {
         font-size: 0;
     }
     @media screen and (max-width: 768px) {
         width: 100%;
+        margin-top: 20px;
+        font-size: 13px;
+
+
     }
 
 }

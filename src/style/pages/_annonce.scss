@@ -75,6 +75,7 @@
     font-size: 18px;
     @media screen and (max-width: 768px) {
         font-size: 12px;
+        font-weight: 500;
     }
     &-picture {
         width: 64px;
@@ -89,9 +90,10 @@
 
     p {
         margin: 0;
+        text-align: end;
+
     }
-    
-    
+
 }
 
 .annonce-rating {
@@ -109,14 +111,19 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 180px auto;
+
     .dropdown-text {
         height: 280px;
+        @media screen and (max-width: 768px) {
+            height: auto;  
+        }
     }
     @media screen and (max-width: 768px) {
         display: flex;
         flex-direction: column;
         width: 95%;
+        margin: 0 auto 130px auto;
     }
     @media (min-width: 1224px) {
         width: 65%;

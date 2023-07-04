@@ -8,11 +8,15 @@ const Header = () => {
       <Link to="/">
         <img src={logo} className="header-logo" alt="Logo Header" />
       </Link>
-      <nav className="navbar">
-        <NavLink to="/" className="navlink">
+      <nav className="nav">
+        <NavLink to="/" className={({ isActive }) =>
+						isActive ? 'nav-active' : 'nav-link'
+					}>
           <div>Accueil</div>
         </NavLink>
-        <NavLink to="/about" className="navlink">
+        <NavLink to="/about" className={({ isActive }) =>
+						isActive ? 'nav-active' : 'nav-link'
+					}>
           <div>A Propos</div>
         </NavLink>
       </nav>

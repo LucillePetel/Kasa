@@ -50,7 +50,7 @@ Développer l'ensemble de l'application responsive et ses composants avec React 
 Le back-end n'étant pas encore disponible, l'application est crée grace au [fichier JSON](src/data/annonces.json) fourni pour les annonces.
 Un second [Fichier JSON](src/data/aboutData.json) a été créé pour contenir les informations de la page "A propos".
 
-## Technologies utilisées : 
+## Technologies utilisées :
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [React](https://fr.legacy.reactjs.org/)
@@ -58,6 +58,8 @@ Un second [Fichier JSON](src/data/aboutData.json) a été créé pour contenir l
 
 ## Rendu final
 
-[Lien vers le site Kasa]()
+[Lien vers le site Kasa](https://kasa.redix60.fr/)
 
+![capture1](/src/img/home.jpg)
 
+![capture1](/src/img/annonce.jpg)
