@@ -1,7 +1,6 @@
 .dropdown {
     width: 47%;
-    margin-top: 31px ; 
-    overflow: hidden;
+    margin-top: 31px;
     border-radius: 10px;
    &-title-box {
         width: 90%;
@@ -9,6 +8,9 @@
 
     &-title {
         font-weight: 500;
+        @media screen and (max-width: 768px) {
+            font-size: 13px;   
+        }
     }
 
     &-text {
@@ -20,22 +22,25 @@
         color: $color-1;
         position: relative;
         top: -17px;
+        transform:scaleY(1);
+        transform-origin:top;
+        transition:transform 0.3s ease-out;
         @media screen and (max-width: 768px) {
             font-size: 12px;
-            line-height: 17.11px;    
+            line-height: 17.11px; 
+            padding-top: 30px;   
         }
     }
     &-text-none {
-        font-size: 0;
+        transform:scaleY(0);
+        height: 0;
+
     }
     @media screen and (max-width: 768px) {
         width: 100%;
         margin-top: 20px;
         font-size: 13px;
-
-
     }
-
 }
 
 
@@ -53,14 +58,20 @@
     .chevron-rotate {
         transform: rotate(180deg);
     }
-
     .dropdown-title {
         margin: 5px 0 5px 18px; 
+    }
+    @media screen and (max-width: 768px) {
+        height: 30px;
+        border-radius: 5px;
     }
 }
 
 .chevron, .chevron-rotate {
         margin-right: 30px;
+        @media screen and (max-width: 768px) {
+            height: 7.91px;
+        }
 }
 
 

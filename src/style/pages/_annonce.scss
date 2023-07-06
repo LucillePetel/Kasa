@@ -59,6 +59,10 @@
 }
 
 .annonce-host {
+    @media screen and (min-width: 768px) {
+        width: 50%;
+    }
+
     @media screen and (max-width: 768px) {
         display: flex;
         flex-direction: row-reverse;
@@ -91,19 +95,25 @@
     p {
         margin: 0;
         text-align: end;
-
     }
-
 }
 
 .annonce-rating {
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
+        @media screen and (max-width: 768px) {
+        height: 13px;
+        justify-content: flex-start;
+
+    }
 }
 
 .star {
     margin-left: 15.25px;
     @media screen and (max-width: 768px) {
         height: 13px;
+        margin: 0 15.25px 0 0;
     }
 }
 
@@ -111,7 +121,7 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 0 auto 180px auto;
+    margin: 0 auto 200px auto;
 
     .dropdown-text {
         height: 280px;
@@ -128,7 +138,6 @@
     @media (min-width: 1224px) {
         width: 65%;
 	}
-    
 }
 
 
