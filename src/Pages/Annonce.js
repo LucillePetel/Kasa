@@ -13,7 +13,6 @@ const Annonce = (i) => {
 
   // Récupération des données de l'annonce correspondant à l'id
   const dataAnnonce = data.find((dataAnnonce) => dataAnnonce.id === id);
-
   return (
     <div className="annonce-page">
       <Header />
@@ -23,7 +22,9 @@ const Annonce = (i) => {
         title={dataAnnonce.title}
         host={dataAnnonce.host}
         tags={dataAnnonce.tags.map((tag) => (
-          <li className="tag">{tag}</li>
+          <li key={tag} className="tag">
+            {tag}
+          </li>
         ))}
         location={dataAnnonce.location}
         rating={dataAnnonce.rating}
@@ -37,7 +38,7 @@ const Annonce = (i) => {
           description={
             <ul className="equipements">
               {dataAnnonce.equipments.map((equipment) => (
-                <li>{equipment}</li>
+                <li key={equipment}>{equipment}</li>
               ))}
             </ul>
           }
