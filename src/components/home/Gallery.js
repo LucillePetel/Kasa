@@ -16,7 +16,7 @@ const Gallery = () => {
   useEffect(fetchApartments, []);
 
   return (
-    <div className="gallery">
+    <section className="gallery">
       {/* Affichage des cards pour chaque logement */}
       {apartments.map((apartment) => (
         <Card
@@ -26,7 +26,7 @@ const Gallery = () => {
           id={apartment.id}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

@@ -29,7 +29,7 @@ const Annonce = (i) => {
         location={dataAnnonce.location}
         rating={dataAnnonce.rating}
       />
-      <div className="contain-collapse">
+      <section className="contain-collapse">
         {/* Collapse contenant la description de l'annonce*/}
         <Collapse title="Description" description={dataAnnonce.description} />
         {/* Collapse contenant les équipements de l'annonce*/}
@@ -43,7 +43,7 @@ const Annonce = (i) => {
             </ul>
           }
         />
-      </div>
+      </section>
       <Footer />
     </div>
   );

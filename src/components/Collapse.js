@@ -10,7 +10,7 @@ const Collapse = (props) => {
   };
 
   return (
-    <div className="dropdown">
+    <article className="dropdown">
       <div onClick={openContent} className="dropdown-title-box">
         <h2 className="dropdown-title">{props.title}</h2>
         {/* Affichage de l'icône de chevron et rotation si le contenu est visible */}
@@ -25,7 +25,7 @@ const Collapse = (props) => {
       ) : (
         <div className="dropdown-text-none">{props.description}</div>
       )}
-    </div>
+    </article>
   );
 };
 

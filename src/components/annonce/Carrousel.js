@@ -21,7 +21,7 @@ const Carrousel = (props) => {
     <section className="carrousel-contain">
       {props.pictures.map((picture, i) => {
         return (
-          <div
+          <article
             key={i}
             className={
               i === current ? "slide slider-active" : "slide slider-inactive"
@@ -31,7 +31,7 @@ const Carrousel = (props) => {
               // Affiche l'image seulement si elle correspond à l'index actuel
               <img src={picture} alt="appartement" className="slider-picture" />
             )}
-          </div>
+          </article>
         );
       })}
 

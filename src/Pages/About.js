@@ -21,7 +21,7 @@ const About = () => {
     <div className="about-page">
       <Header />
       <BannerAbout />
-      <div className="about-collapse">
+      <section className="about-collapse">
         {/* Affichage des collapses pour chaque élément */}
         {abouts.map((about, index) => (
           <Collapse
@@ -30,7 +30,7 @@ const About = () => {
             description={about.description}
           />
         ))}
-      </div>
+      </section>
       <Footer />
     </div>
   );
