@@ -3,10 +3,12 @@ import About from "./Pages/About";
 import Annonce from "./Pages/Annonce";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/annonce/:id" exact element={<Annonce />} />
