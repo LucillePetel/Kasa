@@ -6,6 +6,7 @@ import Collapse from "../components/Collapse";
 import data from "../data/annonces.json";
 
 import { useParams } from "react-router-dom";
+import Tags from "../components/annonce/Tags";
 
 const Annonce = (i) => {
   //useParams pour récuperer l'id depuis l'url
@@ -22,9 +23,7 @@ const Annonce = (i) => {
         title={dataAnnonce.title}
         host={dataAnnonce.host}
         tags={dataAnnonce.tags.map((tag) => (
-          <li key={tag} className="tag">
-            {tag}
-          </li>
+          <Tags key={tag} tag={tag} />
         ))}
         location={dataAnnonce.location}
         rating={dataAnnonce.rating}
