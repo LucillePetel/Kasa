@@ -2,6 +2,16 @@
     color: $color-1;
 }
 
+.slider-number {
+    position: absolute;
+    left: 49.5%;
+    top:357.67px;
+    font-size: 18px;
+    color: $white;
+    @media (max-width: 1224px) {
+        opacity: 0;
+	}
+}
 
 .content-info {
     margin-top: 50px;

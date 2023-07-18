@@ -31,6 +31,11 @@ const Carrousel = (props) => {
               // Affiche l'image seulement si elle correspond à l'index actuel
               <img src={picture} alt="appartement" className="slider-picture" />
             )}
+            {i === current && length > 1 && (
+              <span className="slider-number">
+                {current + 1}/{length}
+              </span>
+            )}
           </article>
         );
       })}
