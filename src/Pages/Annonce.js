@@ -5,46 +5,61 @@ import Info from "../components/annonce/Info";
 import Collapse from "../components/Collapse";
 import data from "../data/annonces.json";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Tags from "../components/annonce/Tags";
+import { useEffect, useState } from "react";
 
 const Annonce = (i) => {
   //useParams pour récuperer l'id depuis l'url
   const { id } = useParams();
+  const [annonce, setAnnonce] = useState();
+  const navigate = useNavigate();
 
   // Récupération des données de l'annonce correspondant à l'id
-  const dataAnnonce = data.find((dataAnnonce) => dataAnnonce.id === id);
+
+  useEffect(() => {
+    const dataAnnonce = data.find((dataAnnonce) => id === dataAnnonce.id);
+    if (dataAnnonce) {
+      setAnnonce(dataAnnonce);
+    } else {
+      navigate("/not-found");
+    }
+  }, [id]);
   return (
-    <div className="annonce-page">
-      <Header />
-      <Carrousel pictures={dataAnnonce.pictures} />
-      <Info
-        key={i}
-        title={dataAnnonce.title}
-        host={dataAnnonce.host}
-        tags={dataAnnonce.tags.map((tag) => (
-          <Tags key={tag} tag={tag} />
-        ))}
-        location={dataAnnonce.location}
-        rating={dataAnnonce.rating}
-      />
-      <section className="contain-collapse">
-        {/* Collapse contenant la description de l'annonce*/}
-        <Collapse title="Description" description={dataAnnonce.description} />
-        {/* Collapse contenant les équipements de l'annonce*/}
-        <Collapse
-          title="Equipements"
-          description={
-            <ul className="equipements">
-              {dataAnnonce.equipments.map((equipment) => (
-                <li key={equipment}>{equipment}</li>
-              ))}
-            </ul>
-          }
-        />
-      </section>
-      <Footer />
-    </div>
+    <>
+      {annonce && (
+        <div className="annonce-page">
+          <Header />
+          <Carrousel pictures={annonce.pictures} />
+          <Info
+            key={i}
+            title={annonce.title}
+            host={annonce.host}
+            tags={annonce.tags.map((tag) => (
+              <Tags key={tag} tag={tag} />
+            ))}
+            location={annonce.location}
+            rating={annonce.rating}
+          />
+          <section className="contain-collapse">
+            {/* Collapse contenant la description de l'annonce*/}
+            <Collapse title="Description" description={annonce.description} />
+            {/* Collapse contenant les équipements de l'annonce*/}
+            <Collapse
+              title="Equipements"
+              description={
+                <ul className="equipements">
+                  {annonce.equipments.map((equipment) => (
+                    <li key={equipment}>{equipment}</li>
+                  ))}
+                </ul>
+              }
+            />
+          </section>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 
